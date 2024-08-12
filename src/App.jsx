@@ -1,5 +1,6 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   // Returned JSX
@@ -7,17 +8,10 @@ function App() {
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
+        <Hero />
       </div>
 
       <ButtonGradient />
-
-      <div
-        style={{
-          height: "500vh",
-          backgroundImage:
-            "linear-gradient(red 0%, green 33%, yellow 66%, blue 100%",
-        }}
-      ></div>
     </>
   );
 }
