@@ -10,6 +10,14 @@ function App() {
       </div>
 
       <ButtonGradient />
+
+      <div
+        style={{
+          height: "500vh",
+          backgroundImage:
+            "linear-gradient(red 0%, green 33%, yellow 66%, blue 100%",
+        }}
+      ></div>
     </>
   );
 }
