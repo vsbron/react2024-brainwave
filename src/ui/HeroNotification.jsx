@@ -1,7 +1,7 @@
 import { notification1 } from "../assets";
 import { notificationImages } from "../constants";
 
-function Notification({ className, title }) {
+function HeroNotification({ className, title }) {
   // Returned JSX
   return (
     <div
@@ -40,4 +40,4 @@ function Notification({ className, title }) {
   );
 }
 
-export default Notification;
+export default HeroNotification;
