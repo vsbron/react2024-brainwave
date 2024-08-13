@@ -6,6 +6,7 @@ React SPA about the Brainwave, the fictional AI Chat service.
 
 - Compact header with the logo, navigation and Sign Up / Sign In buttons
 - Hero section that features some parallax elements;
+- Benefits section which highlight the pros of the service;
 
 ## Details
 
