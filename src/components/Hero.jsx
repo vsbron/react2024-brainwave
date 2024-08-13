@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
 import { curve, heroBackground, robot } from "../assets";
@@ -6,7 +7,8 @@ import { BackgroundCircles, BottomLine, Gradient } from "../ui/Hero";
 
 import Button from "./Button";
 import Section from "./Section";
-import { useRef } from "react";
+import Generating from "./Generating";
+import Notification from "./Notification";
 
 function Hero() {
   // Creating a reference for parallax
@@ -49,6 +51,7 @@ function Hero() {
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.8rem]" />
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+                {/* Robot image */}
                 <img
                   src={robot}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
@@ -57,6 +60,10 @@ function Hero() {
                   alt="AI"
                 />
 
+                {/* Generating Line */}
+                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
+
+                {/* Left modal with icons */}
                 <ScrollParallax isAbsolutelyPositioned>
                   <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
                     {heroIcons.map((icon, i) => (
@@ -65,6 +72,13 @@ function Hero() {
                       </li>
                     ))}
                   </ul>
+                </ScrollParallax>
+
+                <ScrollParallax isAbsolutelyPositioned>
+                  <Notification
+                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
+                    title="Code generation"
+                  />
                 </ScrollParallax>
               </div>
             </div>
@@ -82,6 +96,7 @@ function Hero() {
           <BackgroundCircles />
         </div>
       </div>
+      <BottomLine />
     </Section>
   );
 }
