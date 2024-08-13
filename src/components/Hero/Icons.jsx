@@ -1,6 +1,6 @@
-import { heroIcons } from "../constants";
+import { heroIcons } from "../../constants";
 
-function HeroIcons({ className }) {
+function Icons({ className }) {
   // Returned JSX
   return (
     <ul className={className}>
@@ -13,4 +13,4 @@ function HeroIcons({ className }) {
   );
 }
 
-export default HeroIcons;
+export default Icons;

@@ -1,4 +1,4 @@
-import { companyLogos } from "../constants";
+import { companyLogos } from "../../constants";
 
 function CompanyLogos({ className }) {
   // Returned JSX

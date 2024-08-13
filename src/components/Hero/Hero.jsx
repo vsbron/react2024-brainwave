@@ -1,16 +1,16 @@
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
-import { curve, heroBackground, robot } from "../assets";
+import { curve, heroBackground, robot } from "../../assets";
+import { BackgroundCircles, BottomLine, Gradient } from "../../ui/Hero";
 
-import Button from "./Button";
-import Section from "./Section";
-import Generating from "./Generating";
 import CompanyLogos from "./CompanyLogos";
+import Generating from "./Generating";
+import Icons from "./Icons";
+import Notification from "./Notification";
 
-import { BackgroundCircles, BottomLine, Gradient } from "../ui/Hero";
-import HeroIcons from "../ui/HeroIcons";
-import HeroNotification from "../ui/HeroNotification";
+import Button from "../Button";
+import Section from "../Section";
 
 function Hero() {
   // Creating a reference for parallax
@@ -67,12 +67,12 @@ function Hero() {
 
                 {/* Left modal with icons */}
                 <ScrollParallax isAbsolutelyPositioned>
-                  <HeroIcons className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex" />
+                  <Icons className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex" />
                 </ScrollParallax>
 
                 {/* Right modal with images */}
                 <ScrollParallax isAbsolutelyPositioned>
-                  <HeroNotification
+                  <Notification
                     className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
                     title="Code generation"
                   />
