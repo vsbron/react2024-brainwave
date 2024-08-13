@@ -12,7 +12,13 @@ function Section({
   return (
     <section
       id={id}
-      className={`relative ${customPaddings || `py-10 lg:py-16 xl:py-20 ${crosses && "lg:py-32 xl:py-40"} ${className || ""}`}`}
+      className={`
+        relative 
+        ${
+          customPaddings ||
+          `py-10 lg:py-16 xl:py-20 ${crosses ? "lg:py-32 xl:py-40" : ""}`
+        } 
+        ${className || ""}`}
     >
       {children}
 
@@ -22,7 +28,7 @@ function Section({
       {crosses && (
         <>
           <div
-            className={`hidden absolute top-0 left-7.5 right-7.5h-0.25 bg-stroke-1 ${crossesOffset && crossesOffset} pointer-events-none lg:block xl:left-10 right:10`}
+            className={`hidden absolute top-0 left-7.5 right-7.5 h-0.25 bg-stroke-1 ${crossesOffset && crossesOffset} pointer-events-none lg:block xl:left-10 xl:right-10`}
           />
           <SectionSvg crossesOffset={crossesOffset} />
         </>

@@ -12,7 +12,7 @@ function Hero() {
       id="hero"
     >
       <div className="container relative">
-        <div className="relative z-1 max-w-62rem mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
             Explore the Possibilities of AI Chatting with{" "}
             <span className="inline-block relative">
@@ -35,7 +35,7 @@ function Hero() {
           </Button>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-22">
-          <div className="relative z-1 p-0.5 reounded-2xl bg-conic-gradient">
+          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.8rem]" />
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
