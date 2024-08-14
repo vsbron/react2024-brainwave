@@ -8,7 +8,8 @@ React SPA about the Brainwave, the fictional AI Chat service.
 - Hero section that features some parallax elements;
 - Benefits section which highlight the pros of the service;
 - Collaboration section that showcases what are the pros of working with the app;
-- Services section that lists all abiliteies of the AI Chat bot;
+- Services section that lists all abilities of the AI Chat bot;
+- Pricing section with all available service packages to order;
 
 ## Details
 

@@ -6,7 +6,7 @@ import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import { HamburgerMenu } from "../ui/Header";
 
-import Button from "./Button";
+import Button from "../ui/Button";
 
 import MenuSvg from "../assets/svg/MenuSvg";
 

@@ -2,7 +2,7 @@ import { brainwaveSymbol, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import { LeftCurve, RightCurve } from "../ui/Collaboration";
 
-import Button from "./Button";
+import Button from "../ui/Button";
 import Section from "./Section";
 
 function Collaboration() {

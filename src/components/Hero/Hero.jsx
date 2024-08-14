@@ -9,7 +9,7 @@ import CompanyLogos from "./CompanyLogos";
 import Icons from "./Icons";
 import Notification from "./Notification";
 
-import Button from "../Button";
+import Button from "../../ui/Button";
 import Section from "../Section";
 
 function Hero() {
