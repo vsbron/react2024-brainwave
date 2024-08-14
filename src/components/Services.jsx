@@ -4,6 +4,12 @@ import Section from "./Section";
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Generating from "../ui/Generating";
+import {
+  PhotoChatMessage,
+  Gradient,
+  VideoBar,
+  VideoChatMessage,
+} from "../ui/Services";
 
 function Services() {
   // Returned JSX
@@ -43,6 +49,28 @@ function Services() {
               </ul>
             </div>
             <Generating className="absolute inset-4 top-auto border border-n-1/10 lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
+          </div>
+
+          <div className="relative z-1 grid gap-5 lg:grid-cols-2">
+            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
+              <div className="absolute inset-0">
+                <img
+                  src={service2}
+                  className="h-full w-full object-cover"
+                  width={630}
+                  height={750}
+                  alt="Robot"
+                />
+              </div>
+              <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
+                <h4 className="h4 mb-4">Photo editing</h4>
+                <p className="body-2 mb-[3rem] text-n-3">
+                  Automatically enhance your photos using our AI app&apos;s
+                  photo editing feature. Try it now!
+                </p>
+              </div>
+              <PhotoChatMessage />
+            </div>
           </div>
         </div>
       </div>

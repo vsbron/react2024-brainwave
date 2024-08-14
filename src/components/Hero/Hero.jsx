@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
+import Generating from "../../ui/Generating";
 import { curve, heroBackground, robot } from "../../assets";
 import { BackgroundCircles, BottomLine, Gradient } from "../../ui/Hero";
 
 import CompanyLogos from "./CompanyLogos";
-import Generating from "./Generating";
 import Icons from "./Icons";
 import Notification from "./Notification";
 
