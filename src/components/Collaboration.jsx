@@ -5,6 +5,7 @@ import { LeftCurve, RightCurve } from "../ui/Collaboration";
 import Button from "../ui/Button";
 import Section from "./Section";
 import { MouseParallax } from "react-just-parallax";
+import Heading from "../ui/Heading";
 
 function Collaboration() {
   // Returned JSX
@@ -12,10 +13,11 @@ function Collaboration() {
     <Section crosses>
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
-          <h2 className="h2 mb-4 md:mb-8">
-            AI Chat App for seamless collaboration
-          </h2>
-          <ul className="max-w-[22rem] mb-10 md:mb-14">
+          <Heading
+            className="h2 mb-4 md:mb-8"
+            title="AI Chat App for seamless collaboration"
+          ></Heading>
+          <ul className="max-w-[22rem] mb-8 lg:mb-14">
             {collabContent.map((item) => (
               <li key={item.id} className="mb-3 py-3">
                 <div className="flex items-center">
@@ -31,7 +33,7 @@ function Collaboration() {
           <Button>Try it now</Button>
         </div>
         {/* Apps circle */}
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
+        <div className="mt-16 lg:ml-auto xl:w-[38rem] lg:mt-4">
           <p className="body-2 mb-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto">
             {collabText}
           </p>
