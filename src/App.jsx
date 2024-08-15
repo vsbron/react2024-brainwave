@@ -1,11 +1,12 @@
-import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
 import Header from "./components/Header";
-
 import Hero from "./components/Hero/Hero";
 import Pricing from "./components/Pricing";
+import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
+
+import ButtonGradient from "./assets/svg/ButtonGradient";
 
 function App() {
   // Returned JSX
@@ -18,8 +19,10 @@ function App() {
         <Collaboration />
         <Services />
         <Pricing />
+        <Roadmap />
       </div>
 
+      {/* Set of linear gradients for further use in the buttons */}
       <ButtonGradient />
     </>
   );
