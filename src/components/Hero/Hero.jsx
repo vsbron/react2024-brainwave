@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 
 import Generating from "../../ui/Generating";
@@ -13,9 +12,6 @@ import Button from "../../ui/Button";
 import Section from "../Section";
 
 function Hero() {
-  // Creating a reference for parallax
-  const parallaxRef = useRef();
-
   // Returned JSX
   return (
     <Section
@@ -25,7 +21,7 @@ function Hero() {
       customPaddings
       id="hero"
     >
-      <div className="container relative" ref={parallaxRef}>
+      <div className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
           <h1 className="h1 mb-6">
             Explore the Possibilities of&nbsp;AI&nbsp;Chatting with{" "}
