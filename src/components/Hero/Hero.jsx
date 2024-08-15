@@ -15,7 +15,7 @@ function Hero() {
   // Returned JSX
   return (
     <Section
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[4rem] md:pt-[5rem] lg:pt-[7rem] -mt-[4.75rem] md:-mt-[5.25rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
