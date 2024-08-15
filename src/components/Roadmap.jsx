@@ -14,7 +14,8 @@ function Roadmap() {
         <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
           {roadmap.map((item) => {
             // Setting the status const of the item
-            const status = item.status === "done" ? "Done" : "In progress";
+            const isStatusDone = item.status === "done";
+
             // Returned JSX
             return (
               <div
@@ -36,13 +37,13 @@ function Roadmap() {
                       <Tagline>{item.date}</Tagline>
                       <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
                         <img
-                          src={item.status === "done" ? check2 : loading1}
-                          className="mr-2.5"
+                          src={isStatusDone ? check2 : loading1}
+                          className={`mr-2.5 ${!isStatusDone && "animate-[spin_2000ms_linear_infinite]"}`}
                           width={16}
                           height={16}
                           alt="Status"
                         />
-                        <div className="tagline">{status}</div>
+                        <div className="tagline">{item.status}</div>
                       </div>
                     </div>
                     <div className="mb-10 -my-10 -mx-15">
