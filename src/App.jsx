@@ -1,5 +1,6 @@
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero/Hero";
 import Pricing from "./components/Pricing";
@@ -20,6 +21,7 @@ function App() {
         <Services />
         <Pricing />
         <Roadmap />
+        <Footer />
       </div>
 
       {/* Set of linear gradients for further use in the buttons */}
