@@ -1,8 +1,11 @@
-import { check } from "../assets";
 import { pricing } from "../constants";
+
 import Button from "../ui/Button";
 
+import { check } from "../assets";
+
 function PricingList() {
+  // Returned JSX
   return (
     <div className="flex gap-[1rem] max-lg:flex-wrap">
       {pricing.map((item) => (

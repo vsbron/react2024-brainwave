@@ -2,13 +2,13 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { brainwave } from "../assets";
 import { navigation } from "../constants";
-import { HamburgerMenu } from "../ui/Header";
 
 import Button from "../ui/Button";
 
+import { brainwave } from "../assets";
 import MenuSvg from "../assets/svg/MenuSvg";
+import { HamburgerMenu } from "../design/Header";
 
 function Header() {
   // Setting the state for the mobile menu

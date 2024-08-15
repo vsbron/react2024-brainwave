@@ -1,5 +1,6 @@
-import { notification1 } from "../../assets";
 import { notificationImages } from "../../constants";
+
+import { notification1 } from "../../assets";
 
 function Notification({ className, title }) {
   // Returned JSX

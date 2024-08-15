@@ -1,15 +1,16 @@
-import Heading from "../ui/Heading";
+import { brainwaveServices, brainwaveServicesIcons } from "../constants";
+
 import Section from "./Section";
+import Generating from "../ui/Generating";
+import Heading from "../ui/Heading";
 
 import { service1, service2, service3, check } from "../assets";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import Generating from "../ui/Generating";
 import {
   PhotoChatMessage,
   Gradient,
   VideoBar,
   VideoChatMessage,
-} from "../ui/Services";
+} from "../design/Services";
 
 function Services() {
   // Returned JSX

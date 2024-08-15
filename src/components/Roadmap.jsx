@@ -1,9 +1,11 @@
-import { check2, grid, loading1 } from "../assets";
 import { roadmap } from "../constants";
+
+import Section from "./Section";
 import Button from "../ui/Button";
 import Heading from "../ui/Heading";
 import Tagline from "../ui/Tagline";
-import Section from "./Section";
+
+import { check2, grid, loading1 } from "../assets";
 
 function Roadmap() {
   // Returned JSX

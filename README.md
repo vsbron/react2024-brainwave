@@ -18,6 +18,7 @@ React SPA about the Brainwave, the fictional AI Chat service.
 - Styles are handled via Tailwind CSS;
 - Parallax effects are handled via React-Just-Parallax library;
 - A big number of improvements were added to the layout and animation to the original project;
+- Responsive design supporting mobile devices with a width of at least 360px;
 
 ## Live version
 

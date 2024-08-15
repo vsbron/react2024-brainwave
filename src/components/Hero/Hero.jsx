@@ -1,15 +1,14 @@
 import { ScrollParallax } from "react-just-parallax";
 
-import Generating from "../../ui/Generating";
-import { curve, heroBackground, robot } from "../../assets";
-import { BackgroundCircles, BottomLine, Gradient } from "../../ui/Hero";
-
+import Section from "../Section";
 import CompanyLogos from "./CompanyLogos";
 import Icons from "./Icons";
 import Notification from "./Notification";
-
 import Button from "../../ui/Button";
-import Section from "../Section";
+import Generating from "../../ui/Generating";
+
+import { curve, heroBackground, robot } from "../../assets";
+import { BackgroundCircles, BottomLine, Gradient } from "../../design/Hero";
 
 function Hero() {
   // Returned JSX

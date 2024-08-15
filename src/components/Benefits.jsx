@@ -1,10 +1,11 @@
-import Section from "./Section";
-
-import Heading from "../ui/Heading";
 import { benefits } from "../constants";
+
+import Section from "./Section";
+import Heading from "../ui/Heading";
+
 import Arrow from "../assets/svg/Arrow";
-import { GradientLight } from "../ui/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
+import { GradientLight } from "../design/Benefits";
 
 function Benefits() {
   // Returned JSX

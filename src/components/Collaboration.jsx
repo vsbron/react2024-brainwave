@@ -1,11 +1,13 @@
-import { brainwaveSymbol, check } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
-import { LeftCurve, RightCurve } from "../ui/Collaboration";
-
-import Button from "../ui/Button";
-import Section from "./Section";
 import { MouseParallax } from "react-just-parallax";
+
+import { collabApps, collabContent, collabText } from "../constants";
+
+import Section from "./Section";
+import Button from "../ui/Button";
 import Heading from "../ui/Heading";
+
+import { brainwaveSymbol, check } from "../assets";
+import { LeftCurve, RightCurve } from "../design/Collaboration";
 
 function Collaboration() {
   // Returned JSX

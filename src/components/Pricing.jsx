@@ -1,10 +1,11 @@
-import { smallSphere, stars } from "../assets";
-import PricingList from "./PricingList";
-import Section from "./Section";
-
-import Heading from "../ui/Heading";
-import { LeftLine, RightLine } from "../ui/Pricing";
 import { MouseParallax } from "react-just-parallax";
+
+import Section from "./Section";
+import PricingList from "./PricingList";
+import Heading from "../ui/Heading";
+
+import { smallSphere, stars } from "../assets";
+import { LeftLine, RightLine } from "../design/Pricing";
 
 function Pricing() {
   // Returned JSX
