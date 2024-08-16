@@ -16,7 +16,7 @@ function Collaboration() {
       <div className="container lg:flex">
         <div className="max-w-[25rem]">
           <Heading
-            className="h2 mb-4 md:mb-8"
+            className="h2 mb-4 md:mb-8 md:!text-left"
             title="AI Chat App for seamless collaboration"
           ></Heading>
           <ul className="max-w-[22rem] mb-8 lg:mb-14">
@@ -32,7 +32,7 @@ function Collaboration() {
               </li>
             ))}
           </ul>
-          <Button>Try it now</Button>
+          <Button href="#pricing">Try it now</Button>
         </div>
         {/* Apps circle */}
         <div className="mt-16 lg:ml-auto xl:w-[38rem] lg:mt-4">

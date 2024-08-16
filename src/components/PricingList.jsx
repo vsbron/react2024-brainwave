@@ -29,7 +29,7 @@ function PricingList() {
           </div>
           <Button
             className="w-[16rem] lg:w-full mb-4"
-            href={item.price ? "/pricing" : "mailto:info@jsm.pro"}
+            href={item.price ? "#pricing" : "mailto:info@jsm.pro"}
             white={!!item.price}
           >
             {item.price ? "Get started" : "Contact Us"}
