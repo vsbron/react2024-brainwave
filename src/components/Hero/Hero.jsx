@@ -1,4 +1,6 @@
 import { ScrollParallax } from "react-just-parallax";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 import Section from "../Section";
 import CompanyLogos from "./CompanyLogos";
@@ -11,6 +13,28 @@ import { curve, heroBackground, robot } from "../../assets";
 import { BackgroundCircles, BottomLine, Gradient } from "../../design/Hero";
 
 function Hero() {
+  useGSAP(() => {
+    // Animation for main title
+    gsap.from(".hero-title", { opacity: 0, y: 50, duration: 0.75, delay: 0.2 });
+
+    // Animation for subtitle
+    gsap.from(".hero-subtitle", {
+      opacity: 0,
+      y: 50,
+      duration: 0.75,
+      delay: 0.5,
+    });
+
+    // Animation for main button
+    gsap.from(".hero-btn", {
+      opacity: 0,
+      scale: 2,
+      duration: 0.3,
+      delay: 1,
+      ease: "power2.in",
+    });
+  });
+
   // Returned JSX
   return (
     <Section
@@ -22,7 +46,7 @@ function Hero() {
     >
       <div className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
+          <h1 className="h1 mb-6 hero-title">
             Explore the Possibilities of&nbsp;AI&nbsp;Chatting with{" "}
             <span className="inline-block relative">
               Brainwave{" "}
@@ -35,13 +59,15 @@ function Hero() {
               />
             </span>
           </h1>
-          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8 hero-subtitle">
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p>
-          <Button href="#features" white>
-            Get started
-          </Button>
+          <div className="hero-btn">
+            <Button href="#features" white>
+              Get started
+            </Button>
+          </div>
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-22">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">

@@ -7,12 +7,33 @@ import Tagline from "../ui/Tagline";
 
 import { check2, grid, loading1 } from "../assets";
 
+import { useGSAP } from "@gsap/react";
+import {
+  animateScrollMultipleGsap,
+  animateTitleScrollGsap,
+} from "../utils/animations";
+
 function Roadmap() {
+  useGSAP(() => {
+    // Animation for the title
+    animateTitleScrollGsap(".roadmap-title");
+
+    // Animation for benefits elements
+    animateScrollMultipleGsap(".roadmap-element", {
+      opacity: 0,
+      scale: 0.75,
+      ease: "power1.inOut",
+      duration: 0.75,
+    });
+  });
+
   // Returned JSX
   return (
     <Section className="overflow-hidden" id="roadmap">
       <div className="container md:pb-10">
-        <Heading title="What we're working on" tag="Ready to get started" />
+        <div className="roadmap-title">
+          <Heading title="What we're working on" tag="Ready to get started" />
+        </div>
         <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
           {roadmap.map((item) => {
             // Setting the status const of the item

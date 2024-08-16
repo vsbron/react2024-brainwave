@@ -5,11 +5,16 @@ import Button from "../ui/Button";
 import { check } from "../assets";
 
 import { useGSAP } from "@gsap/react";
-import { animateGsap } from "../utils/animations";
+import { animateScrollMultipleGsap } from "../utils/animations";
 
 function PricingList() {
   useGSAP(() => {
-    animateGsap(".pricing-element", { opacity: 0, y: 100, ease: "power2.in" });
+    // Animation for the pricing options elements
+    animateScrollMultipleGsap(".pricing-element", {
+      opacity: 0,
+      scale: 0.75,
+      ease: "power2.in",
+    });
   });
 
   // Returned JSX

@@ -1,12 +1,16 @@
 import { companyLogos } from "../../constants";
 
 import { useGSAP } from "@gsap/react";
-import { animateGsap } from "../../utils/animations";
+import { animateScrollMultipleGsap } from "../../utils/animations";
 
 function CompanyLogos({ className }) {
   // Animation for other companies' logos
   useGSAP(() => {
-    animateGsap(".logo", { opacity: 0, y: 100, ease: "power1.inOut" });
+    animateScrollMultipleGsap(".logo", {
+      opacity: 0,
+      y: 100,
+      ease: "power1.inOut",
+    });
   });
 
   // Returned JSX

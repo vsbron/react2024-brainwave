@@ -13,25 +13,37 @@ import {
 } from "../design/Services";
 
 import { useGSAP } from "@gsap/react";
-import { animateGsap } from "../utils/animations";
+import {
+  animateTitleScrollGsap,
+  animateScrollMultipleGsap,
+} from "../utils/animations";
 
 function Services() {
-  // Animation for benefits elements
   useGSAP(() => {
-    animateGsap(".service-element", { opacity: 0, y: 100, ease: "power2.in" });
+    // Animation for the title
+    animateTitleScrollGsap(".services-title");
+
+    // Animation for benefits elements
+    animateScrollMultipleGsap(".services-element", {
+      opacity: 0,
+      y: 100,
+      ease: "power2.in",
+    });
   });
 
   // Returned JSX
   return (
     <Section crosses id="how-to-use">
       <div className="container">
-        <Heading
-          title="Generative AI made for creators"
-          text="Brainwave unlocks the potential of AI-powered applications"
-        />
+        <div className="services-title">
+          <Heading
+            title="Generative AI made for creators"
+            text="Brainwave unlocks the potential of AI-powered applications"
+          />
+        </div>
         <div className="relative">
           {/* Service 1 */}
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
+          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-n-1/10 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem] services-element">
             <div className="absolute top-0 left-0 w-full h-full pointer-events-none md:w-3/5 xl:w-auto">
               <img
                 src={service1}
@@ -63,7 +75,7 @@ function Services() {
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             {/* Service 2 */}
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden service-element">
+            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden services-element">
               <div className="absolute inset-0">
                 <img
                   src={service2}
@@ -84,7 +96,7 @@ function Services() {
             </div>
 
             {/* Service 3 */}
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem] service-element">
+            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem] services-element">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Video generation</h4>
                 <p className="body-2 mb-[2rem] text-n-3">

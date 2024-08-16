@@ -7,12 +7,15 @@ import Heading from "../ui/Heading";
 import { smallSphere, stars } from "../assets";
 import { LeftLine, RightLine } from "../design/Pricing";
 import { useGSAP } from "@gsap/react";
-import { animateGsap } from "../utils/animations";
+import { animateScrollGsap, animateTitleScrollGsap } from "../utils/animations";
 
 function Pricing() {
-  // Animation for benefits elements
   useGSAP(() => {
-    animateGsap(".planets-element", {
+    // Animation for the title
+    animateTitleScrollGsap(".pricing-title");
+
+    // Animation for benefits elements
+    animateScrollGsap(".planets-element", {
       opacity: 0,
       y: 100,
       ease: "power1.inOut",
@@ -47,10 +50,12 @@ function Pricing() {
             </MouseParallax>
           </div>
         </div>
-        <Heading
-          tag="get started with Brainwave"
-          title="Pay once, use forever"
-        />
+        <div className="pricing-title">
+          <Heading
+            tag="get started with Brainwave"
+            title="Pay once, use forever"
+          />
+        </div>
         <div className="relative">
           <PricingList />
           <LeftLine />

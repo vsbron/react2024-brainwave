@@ -8,26 +8,39 @@ import ClipPath from "../assets/svg/ClipPath";
 import { GradientLight } from "../design/Benefits";
 
 import { useGSAP } from "@gsap/react";
-import { animateGsap } from "../utils/animations";
+import {
+  animateTitleScrollGsap,
+  animateScrollMultipleGsap,
+} from "../utils/animations";
 
 function Benefits() {
-  // Animation for benefits elements
+  // GSAP animations
   useGSAP(() => {
-    animateGsap(".benefit-element", { opacity: 0, y: 100, ease: "power2.in" });
+    // Animation for the title
+    animateTitleScrollGsap(".benefits-title");
+
+    // Animation for benefits elements
+    animateScrollMultipleGsap(".benefits-element", {
+      opacity: 0,
+      scale: 0.75,
+      ease: "power2.in",
+    });
   });
 
   // Returned JSX
   return (
     <Section id="features">
       <div className="container relative z-2">
-        <Heading
-          className="md:max-w-md lg:max-w-2xl"
-          title="Chat Smarter, Not Harder with Brainwave"
-        />
+        <div className="benefits-title">
+          <Heading
+            className="md:max-w-md lg:max-w-2xl"
+            title="Chat Smarter, Not Harder with Brainwave"
+          />
+        </div>
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[25rem] opacity-100 benefit-element group"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[25rem] opacity-100 benefits-element group"
               style={{ backgroundImage: `url(${item.backgroundUrl})` }}
               key={item.id}
             >
