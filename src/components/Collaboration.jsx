@@ -8,8 +8,19 @@ import Heading from "../ui/Heading";
 
 import { brainwaveSymbol, check } from "../assets";
 import { LeftCurve, RightCurve } from "../design/Collaboration";
+import { useGSAP } from "@gsap/react";
+import { animateGsap } from "../utils/animations";
 
 function Collaboration() {
+  // Animation for other companies' logos
+  useGSAP(() => {
+    animateGsap(".button-animated", {
+      scale: 2,
+      opacity: 0,
+      ease: "power2.in",
+    });
+  });
+
   // Returned JSX
   return (
     <Section crosses>
@@ -32,7 +43,9 @@ function Collaboration() {
               </li>
             ))}
           </ul>
-          <Button href="#pricing">Try it now</Button>
+          <div className="button-animated inline-block">
+            <Button href="#pricing">Try it now</Button>
+          </div>
         </div>
         {/* Apps circle */}
         <div className="mt-16 lg:ml-auto xl:w-[38rem] lg:mt-4">

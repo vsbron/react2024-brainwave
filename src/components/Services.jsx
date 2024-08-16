@@ -12,7 +12,15 @@ import {
   VideoChatMessage,
 } from "../design/Services";
 
+import { useGSAP } from "@gsap/react";
+import { animateGsap } from "../utils/animations";
+
 function Services() {
+  // Animation for benefits elements
+  useGSAP(() => {
+    animateGsap(".service-element", { opacity: 0, y: 100, ease: "power2.in" });
+  });
+
   // Returned JSX
   return (
     <Section crosses id="how-to-use">
@@ -55,7 +63,7 @@ function Services() {
 
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             {/* Service 2 */}
-            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden">
+            <div className="relative min-h-[39rem] border border-n-1/10 rounded-3xl overflow-hidden service-element">
               <div className="absolute inset-0">
                 <img
                   src={service2}
@@ -76,7 +84,7 @@ function Services() {
             </div>
 
             {/* Service 3 */}
-            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem]">
+            <div className="p-4 bg-n-7 rounded-3xl overflow-hidden lg:min-h-[46rem] service-element">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Video generation</h4>
                 <p className="body-2 mb-[2rem] text-n-3">

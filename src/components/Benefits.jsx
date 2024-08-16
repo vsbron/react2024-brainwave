@@ -7,7 +7,15 @@ import Arrow from "../assets/svg/Arrow";
 import ClipPath from "../assets/svg/ClipPath";
 import { GradientLight } from "../design/Benefits";
 
+import { useGSAP } from "@gsap/react";
+import { animateGsap } from "../utils/animations";
+
 function Benefits() {
+  // Animation for benefits elements
+  useGSAP(() => {
+    animateGsap(".benefit-element", { opacity: 0, y: 100, ease: "power2.in" });
+  });
+
   // Returned JSX
   return (
     <Section id="features">
@@ -19,7 +27,7 @@ function Benefits() {
         <div className="flex flex-wrap gap-10 mb-10">
           {benefits.map((item) => (
             <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[25rem] group"
+              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[25rem] opacity-100 benefit-element group"
               style={{ backgroundImage: `url(${item.backgroundUrl})` }}
               key={item.id}
             >

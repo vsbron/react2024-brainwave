@@ -29,7 +29,7 @@ function Footer() {
             &copy; {new Date().getFullYear()}. Brainwave. All Rights reserved
           </p>
         </div>
-        <div className="text-center sm:text-right">
+        <div className="text-center sm:text-right max-sm:text-xs">
           <p>
             Built by VSBroN as a portfolio project
             <br />

@@ -6,13 +6,25 @@ import Heading from "../ui/Heading";
 
 import { smallSphere, stars } from "../assets";
 import { LeftLine, RightLine } from "../design/Pricing";
+import { useGSAP } from "@gsap/react";
+import { animateGsap } from "../utils/animations";
 
 function Pricing() {
+  // Animation for benefits elements
+  useGSAP(() => {
+    animateGsap(".planets-element", {
+      opacity: 0,
+      y: 100,
+      ease: "power1.inOut",
+      duration: 0.75,
+    });
+  });
+
   // Returned JSX
   return (
     <Section className="overflow-hidden" id="pricing">
       <div className="container relative z-2">
-        <div className="hidden relative justify-center mb-[6.5rem] lg:flex">
+        <div className="hidden relative justify-center mb-[6.5rem] lg:flex planets-element">
           <MouseParallax strength={0.015}>
             <img
               src={smallSphere}
