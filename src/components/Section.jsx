@@ -17,7 +17,7 @@ function Section({
         ${customPaddings || `py-4 lg:py-12 xl:py-16 ${crosses && "lg:py-24"}`} 
         ${className || ""}`}
     >
-      <div className="h-[5.25rem] md:h-[4.75rem]" />
+      {id !== "footer" && <div className={`h-[5.25rem] md:h-[4.75rem]`} />}
       {children}
 
       <div className="hidden absolute top-0 left-5 w-0.25 h-full bg-stroke-1 pointer-events-none md:block lg:left-7.5 xl:left-10" />
