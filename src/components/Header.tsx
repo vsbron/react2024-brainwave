@@ -12,7 +12,7 @@ import { HamburgerMenu } from "../design/Header";
 
 function Header() {
   // Setting the state for the mobile menu
-  const [openNavigation, setOpenNavigation] = useState(false);
+  const [openNavigation, setOpenNavigation] = useState<boolean>(false);
 
   // Getting the current pathname from the hook
   const pathname = useLocation();
