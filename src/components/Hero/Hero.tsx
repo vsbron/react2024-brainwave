@@ -2,15 +2,15 @@ import { ScrollParallax } from "react-just-parallax";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-import Section from "../Section";
-import CompanyLogos from "./CompanyLogos";
-import Icons from "./Icons";
-import Notification from "./Notification";
-import Button from "../../ui/Button";
-import Generating from "../../ui/Generating";
+import Section from "../Section.js";
+import CompanyLogos from "./CompanyLogos.js";
+import Icons from "./Icons.jsx";
+import Notification from "./Notification.jsx";
+import Button from "../../ui/Button.js";
+import Generating from "../../ui/Generating.js";
 
-import { curve, heroBackground, robot } from "../../assets";
-import { BackgroundCircles, BottomLine, Gradient } from "../../design/Hero";
+import { curve, heroBackground, robot } from "../../assets/index.js";
+import { BackgroundCircles, BottomLine, Gradient } from "../../design/Hero.js";
 
 function Hero() {
   useGSAP(() => {

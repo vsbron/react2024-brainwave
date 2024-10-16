@@ -1,13 +1,14 @@
 import SectionSvg from "../assets/svg/SectionSvg";
+import { SectionProps } from "../lib/types";
 
 function Section({
   className,
   id,
-  crosses,
+  crosses = false,
   crossesOffset,
-  customPaddings,
+  customPaddings = false,
   children,
-}) {
+}: SectionProps) {
   // Returned JSX
   return (
     <section

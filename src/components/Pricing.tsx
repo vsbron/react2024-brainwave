@@ -1,13 +1,16 @@
 import { MouseParallax } from "react-just-parallax";
 
-import Section from "./Section";
-import PricingList from "./PricingList";
-import Heading from "../ui/Heading";
+import Section from "./Section.js";
+import PricingList from "./PricingList.js";
+import Heading from "../ui/Heading.js";
 
-import { smallSphere, stars } from "../assets";
-import { LeftLine, RightLine } from "../design/Pricing";
+import { smallSphere, stars } from "../assets/index.js";
+import { LeftLine, RightLine } from "../design/Pricing.js";
 import { useGSAP } from "@gsap/react";
-import { animateScrollGsap, animateTitleScrollGsap } from "../utils/animations";
+import {
+  animateScrollGsap,
+  animateTitleScrollGsap,
+} from "../utils/animations.js";
 
 function Pricing() {
   useGSAP(() => {

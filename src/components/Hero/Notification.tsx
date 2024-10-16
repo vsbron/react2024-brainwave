@@ -1,8 +1,8 @@
-import { notificationImages } from "../../constants";
-
 import { notification1 } from "../../assets";
+import { notificationImages } from "../../constants";
+import { NotificationProps } from "../../lib/types";
 
-function Notification({ className, title }) {
+function Notification({ className, title }: NotificationProps) {
   // Returned JSX
   return (
     <div
