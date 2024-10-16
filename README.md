@@ -15,6 +15,7 @@ React SPA about the Brainwave, the fictional AI Chat service.
 
 ## Details
 
+- App is written as React ASP with TypeScript;
 - Styles are handled via Tailwind CSS;
 - Parallax effects are handled via React-Just-Parallax library;
 - Animation effects are handled via GSAP;

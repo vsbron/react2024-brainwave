@@ -1,6 +1,7 @@
 import { loading } from "../assets";
+import { GeneratingProps } from "../lib/types";
 
-function Generating({ className }) {
+function Generating({ className }: GeneratingProps) {
   // Returned JSX
   return (
     <div

@@ -1,6 +1,7 @@
+import { HeadingProps } from "../lib/types";
 import Tagline from "./Tagline";
 
-function Heading({ className, title, text, tag }) {
+function Heading({ className, title, text, tag }: HeadingProps) {
   // Returned JSX
   return (
     <div
