@@ -17,13 +17,16 @@ function Benefits() {
   // GSAP animations
   useGSAP(() => {
     // Animation for the title
-    animateTitleScrollGsap(".benefits-title");
+    animateTitleScrollGsap({ target: ".benefits-title" });
 
     // Animation for benefits elements
-    animateScrollMultipleGsap(".benefits-element", {
-      opacity: 0,
-      scale: 0.75,
-      ease: "power2.in",
+    animateScrollMultipleGsap({
+      target: ".benefits-element",
+      animationProps: {
+        opacity: 0,
+        scale: 0.75,
+        ease: "power2.in",
+      },
     });
   });
 

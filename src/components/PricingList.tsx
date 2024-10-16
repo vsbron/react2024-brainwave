@@ -10,10 +10,13 @@ import { animateScrollMultipleGsap } from "../utils/animations";
 function PricingList() {
   useGSAP(() => {
     // Animation for the pricing options elements
-    animateScrollMultipleGsap(".pricing-element", {
-      opacity: 0,
-      scale: 0.75,
-      ease: "power2.in",
+    animateScrollMultipleGsap({
+      target: ".pricing-element",
+      animationProps: {
+        opacity: 0,
+        scale: 0.75,
+        ease: "power2.in",
+      },
     });
   });
 

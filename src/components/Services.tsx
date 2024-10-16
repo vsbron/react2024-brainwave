@@ -21,13 +21,16 @@ import {
 function Services() {
   useGSAP(() => {
     // Animation for the title
-    animateTitleScrollGsap(".services-title");
+    animateTitleScrollGsap({ target: ".services-title" });
 
     // Animation for benefits elements
-    animateScrollMultipleGsap(".services-element", {
-      opacity: 0,
-      y: 100,
-      ease: "power2.in",
+    animateScrollMultipleGsap({
+      target: ".services-element",
+      animationProps: {
+        opacity: 0,
+        y: 100,
+        ease: "power2.in",
+      },
     });
   });
 

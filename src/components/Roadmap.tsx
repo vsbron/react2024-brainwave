@@ -16,14 +16,17 @@ import {
 function Roadmap() {
   useGSAP(() => {
     // Animation for the title
-    animateTitleScrollGsap(".roadmap-title");
+    animateTitleScrollGsap({ target: ".roadmap-title" });
 
     // Animation for benefits elements
-    animateScrollMultipleGsap(".roadmap-element", {
-      opacity: 0,
-      scale: 0.75,
-      ease: "power1.inOut",
-      duration: 0.75,
+    animateScrollMultipleGsap({
+      target: ".roadmap-element",
+      animationProps: {
+        opacity: 0,
+        scale: 0.75,
+        ease: "power1.inOut",
+        duration: 0.75,
+      },
     });
   });
 

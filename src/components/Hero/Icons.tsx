@@ -1,6 +1,7 @@
 import { heroIcons } from "../../constants";
+import { IconsProps } from "../../lib/types";
 
-function Icons({ className }) {
+function Icons({ className }: IconsProps) {
   // Returned JSX
   return (
     <ul className={className}>

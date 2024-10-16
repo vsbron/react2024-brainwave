@@ -1,6 +1,8 @@
 import { MouseEvent, ReactNode } from "react";
 
 // Component Types
+export type CompanyLogosProps = { className: string };
+export type IconsProps = { className: string };
 export type SectionProps = {
   className?: string;
   id?: string;
@@ -33,3 +35,18 @@ export type HeadingProps = {
   tag?: string;
 };
 export type TaglineProps = { className?: string; children: string };
+
+// Utils Types
+export type AnimationGSAPProps = {
+  target: string;
+  animationProps?: {
+    scale?: number;
+    opacity?: number;
+    x?: number;
+    y?: number;
+    duration?: number;
+    ease?: string;
+    delay?: number;
+  };
+  scrollProps?: any;
+};

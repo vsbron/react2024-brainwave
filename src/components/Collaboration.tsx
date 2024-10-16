@@ -18,30 +18,42 @@ import {
 function Collaboration() {
   useGSAP(() => {
     // Animation for the title
-    animateTitleScrollGsap(".collaboration-title", {
-      x: -100,
+    animateTitleScrollGsap({
+      target: ".collaboration-title",
+      animationProps: {
+        x: -100,
+      },
     });
 
     // Animation for CTA button
-    animateScrollGsap(".button-animated", {
-      scale: 2,
-      opacity: 0,
-      ease: "power2.in",
+    animateScrollGsap({
+      target: ".button-animated",
+      animationProps: {
+        scale: 2,
+        opacity: 0,
+        ease: "power2.in",
+      },
     });
 
     // Animation for app logos
-    animateScrollMultipleGsap(".collaboration-apps", {
-      scale: 1.15,
-      opacity: 0,
-      ease: "power3.in",
+    animateScrollMultipleGsap({
+      target: ".collaboration-apps",
+      animationProps: {
+        scale: 1.15,
+        opacity: 0,
+        ease: "power3.in",
+      },
     });
 
     // Animation for Brainwave logo
-    animateScrollGsap(".collaboration-brainwave", {
-      scale: 1.3,
-      opacity: 0,
-      ease: "power3.in",
-      delay: 0.5,
+    animateScrollGsap({
+      target: ".collaboration-brainwave",
+      animationProps: {
+        scale: 1.3,
+        opacity: 0,
+        ease: "power3.in",
+        delay: 0.5,
+      },
     });
   });
 

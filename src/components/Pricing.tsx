@@ -15,14 +15,17 @@ import {
 function Pricing() {
   useGSAP(() => {
     // Animation for the title
-    animateTitleScrollGsap(".pricing-title");
+    animateTitleScrollGsap({ target: ".pricing-title" });
 
     // Animation for benefits elements
-    animateScrollGsap(".planets-element", {
-      opacity: 0,
-      y: 100,
-      ease: "power1.inOut",
-      duration: 0.75,
+    animateScrollGsap({
+      target: ".planets-element",
+      animationProps: {
+        opacity: 0,
+        y: 100,
+        ease: "power1.inOut",
+        duration: 0.75,
+      },
     });
   });
 

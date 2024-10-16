@@ -1,4 +1,4 @@
-const PlusSvg = ({ className = "" }) => {
+const PlusSvg = ({ className = "" }: { className: string }) => {
   return (
     <svg className={`${className} || ""`} width="11" height="11" fill="none">
       <path
